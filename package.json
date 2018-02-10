@@ -1,0 +1,32 @@
+{
+  "name": "personal_website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dagaflux/personal_website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dagaflux/personal_website/issues"
+  },
+  "homepage": "https://github.com/Dagaflux/personal_website#readme",
+  "private": true,
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "pug": "^2.0.0-rc.4"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.2",
+    "grunt-contrib-pug": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-ejs": "^0.3.0",
+    "grunt-sass": "^2.1.0"
+  }
+}
