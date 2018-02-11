@@ -20,10 +20,22 @@ module.exports = function(grunt) {
     },
 
     ejs: {
-      all: {
+      dist: {
         files: {
           'index.php' : 'views/index.ejs'
         }
+      }
+    },
+
+    cssmin: {
+      target: {
+        files: [{
+          expand: true,
+          cwd: 'sass',
+          src: ['*.css', '!*.min.css'],
+          dest: 'public/stylesheets',
+          ext: '.min.css'
+        }]
       }
     }
   });
@@ -31,6 +43,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-ejs');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   
-  grunt.registerTask('default', ['watch', 'sass', 'ejs']);
+  grunt.registerTask('default', ['watch', 'sass', 'ejs', 'cssmin']);
 };

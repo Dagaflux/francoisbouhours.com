@@ -1,3 +1,38 @@
 body {
- background: black;
+ background: url(../../img/background.png) repeat #fff fixed;
+ color: $text-color;
+ font: 100% $font-stack;
+ position: relative;
+}
+
+.page-wrapper {
+	margin: 0 auto;
+	max-width: 1280px;
+}
+
+.link__circle {
+	.fab,
+	.fas {
+		color: #fff;
+	}
+
+	.fa-circle {
+		color: $primary-color;
+	}
+}
+
+.google__blue {
+	color: $google-blue;
+}
+
+.google__red {
+	color: $google-red;
+}
+
+.google__yellow {
+	color: $google-yellow;
+}
+
+.google__green {
+	color: $google-green;
 }

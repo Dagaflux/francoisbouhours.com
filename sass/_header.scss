@@ -1,6 +1,41 @@
-header {
-	height: 200px;
-	width: 1000px;
+.header-wrapper {
+	padding: 0 15px;
+}
+
+.bandeau {
+	background: $primary-color;
 	display: block;
-	background: brown;
+	height: 13px;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+}
+
+.container__icon {
+	float: right;
+	margin: 22px 0 0 0;
+}
+
+.link__circle {
+	margin: 0 5px; 
+}
+
+.container__info {
+	display: inline-block;
+	margin-top: 52px;
+}
+
+.name {
+	color: $title-color;
+	font-size: 2.9em;
+	font-weight: bold;
+	line-height: 1.2;
+}
+
+.emploi {
+	color: $title-color;
+	font-size: 1.3em;
+	font-weight: bold;
 }

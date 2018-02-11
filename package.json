@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "grunt": "^1.0.2",
+    "grunt-contrib-cssmin": "^2.2.1",
     "grunt-contrib-pug": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-ejs": "^0.3.0",

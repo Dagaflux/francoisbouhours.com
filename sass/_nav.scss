@@ -1,0 +1,36 @@
+.nav-wrapper {
+	margin: 70px 0 0;
+	text-align: center;
+}
+
+.cat__box {
+	@extend %cat-box;
+}
+
+.cat__one {
+	background: $cat-one-color;
+}
+
+.cat__two {
+	background: $cat-two-color;
+}
+
+.cat__three {
+	background: $cat-three-color;
+}
+
+.cat__four {
+	background: $cat-four-color;
+}
+
+.cat__five {
+	background: $cat-five-color;
+}
+
+.cat__quote {
+	@extend %quote;
+	display: inline-block;
+	line-height: 1.2;
+	margin-left: 10px;
+	vertical-align: bottom;
+}

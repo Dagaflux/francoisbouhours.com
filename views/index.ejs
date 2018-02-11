@@ -1,23 +1,27 @@
- <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 	<head>
 		<title>Portfolio - François Bouhours</title>
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Yellowtail" rel="stylesheet"> 
-		<link href="https://use.fontawesome.com/releases/v5.0.6/css/fontawesome.css" rel="stylesheet">
+		<meta charset="UTF-8"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		
+		<!-- FAVICON -->
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="vendor/fontawesome/css/fontawesome-all.min.css">
 		<link rel="stylesheet" type="text/css" href="public/stylesheets/styles.css">
 	</head>
 
 	<body>
 		<div class="page-wrapper">
-<i class="fab fa-linkedin-in"></i>
-<i class="fab fa-viadeo"></i>
+			<header class="header-wrapper"><%- include('partials/header'); %></header>
 
-<i class="fas fa-envelope"></i>
+			<nav class="nav-wrapper"><%- include('partials/nav'); %></nav>
 
+			<section class="content-wrapper"><%- include('partials/content'); %></section>
 
-
-
-
+			<footer><%- include('partials/footer'); %></footer>
 		</div>
-		</body>
+	</body>
 </html>

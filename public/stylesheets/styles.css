@@ -1,8 +1,460 @@
-body {
-  background: black; }
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
 
-header {
-  height: 200px;
-  width: 1000px;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* LESS Syntaxis. Replace this in CSS */
+/* open-sans-300 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url("../../fonts/open-sans-v15-latin-300.eot");
+  /* IE9 Compat Modes */
+  src: local("Open Sans Light"), local("OpenSans-Light"), url("../../fonts/open-sans-v15-latin-300.eot?#iefix") format("embedded-opentype"), url("../../fonts/open-sans-v15-latin-300.woff2") format("woff2"), url("../../fonts/open-sans-v15-latin-300.woff") format("woff"), url("../../fonts/open-sans-v15-latin-300.ttf") format("truetype"), url("../../fonts/open-sans-v15-latin-300.svg#OpenSans") format("svg");
+  /* Legacy iOS */ }
+
+/* open-sans-300italic - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 300;
+  src: url("../../fonts/open-sans-v15-latin-300italic.eot");
+  /* IE9 Compat Modes */
+  src: local("Open Sans Light Italic"), local("OpenSans-LightItalic"), url("../../fonts/open-sans-v15-latin-300italic.eot?#iefix") format("embedded-opentype"), url("../../fonts/open-sans-v15-latin-300italic.woff2") format("woff2"), url("../../fonts/open-sans-v15-latin-300italic.woff") format("woff"), url("../../fonts/open-sans-v15-latin-300italic.ttf") format("truetype"), url("../../fonts/open-sans-v15-latin-300italic.svg#OpenSans") format("svg");
+  /* Legacy iOS */ }
+
+/* open-sans-regular - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/open-sans-v15-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url("../../fonts/open-sans-v15-latin-regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/open-sans-v15-latin-regular.woff2") format("woff2"), url("../../fonts/open-sans-v15-latin-regular.woff") format("woff"), url("../../fonts/open-sans-v15-latin-regular.ttf") format("truetype"), url("../../fonts/open-sans-v15-latin-regular.svg#OpenSans") format("svg");
+  /* Legacy iOS */ }
+
+/* open-sans-italic - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: url("../../fonts/open-sans-v15-latin-italic.eot");
+  /* IE9 Compat Modes */
+  src: local("Open Sans Italic"), local("OpenSans-Italic"), url("../../fonts/open-sans-v15-latin-italic.eot?#iefix") format("embedded-opentype"), url("../../fonts/open-sans-v15-latin-italic.woff2") format("woff2"), url("../../fonts/open-sans-v15-latin-italic.woff") format("woff"), url("../../fonts/open-sans-v15-latin-italic.ttf") format("truetype"), url("../../fonts/open-sans-v15-latin-italic.svg#OpenSans") format("svg");
+  /* Legacy iOS */ }
+
+/* open-sans-600 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url("../../fonts/open-sans-v15-latin-600.eot");
+  /* IE9 Compat Modes */
+  src: local("Open Sans SemiBold"), local("OpenSans-SemiBold"), url("../../fonts/open-sans-v15-latin-600.eot?#iefix") format("embedded-opentype"), url("../../fonts/open-sans-v15-latin-600.woff2") format("woff2"), url("../../fonts/open-sans-v15-latin-600.woff") format("woff"), url("../../fonts/open-sans-v15-latin-600.ttf") format("truetype"), url("../../fonts/open-sans-v15-latin-600.svg#OpenSans") format("svg");
+  /* Legacy iOS */ }
+
+/* open-sans-600italic - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 600;
+  src: url("../../fonts/open-sans-v15-latin-600italic.eot");
+  /* IE9 Compat Modes */
+  src: local("Open Sans SemiBold Italic"), local("OpenSans-SemiBoldItalic"), url("../../fonts/open-sans-v15-latin-600italic.eot?#iefix") format("embedded-opentype"), url("../../fonts/open-sans-v15-latin-600italic.woff2") format("woff2"), url("../../fonts/open-sans-v15-latin-600italic.woff") format("woff"), url("../../fonts/open-sans-v15-latin-600italic.ttf") format("truetype"), url("../../fonts/open-sans-v15-latin-600italic.svg#OpenSans") format("svg");
+  /* Legacy iOS */ }
+
+/* open-sans-700 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../fonts/open-sans-v15-latin-700.eot");
+  /* IE9 Compat Modes */
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url("../../fonts/open-sans-v15-latin-700.eot?#iefix") format("embedded-opentype"), url("../../fonts/open-sans-v15-latin-700.woff2") format("woff2"), url("../../fonts/open-sans-v15-latin-700.woff") format("woff"), url("../../fonts/open-sans-v15-latin-700.ttf") format("truetype"), url("../../fonts/open-sans-v15-latin-700.svg#OpenSans") format("svg");
+  /* Legacy iOS */ }
+
+/* open-sans-700italic - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: url("../../fonts/open-sans-v15-latin-700italic.eot");
+  /* IE9 Compat Modes */
+  src: local("Open Sans Bold Italic"), local("OpenSans-BoldItalic"), url("../../fonts/open-sans-v15-latin-700italic.eot?#iefix") format("embedded-opentype"), url("../../fonts/open-sans-v15-latin-700italic.woff2") format("woff2"), url("../../fonts/open-sans-v15-latin-700italic.woff") format("woff"), url("../../fonts/open-sans-v15-latin-700italic.ttf") format("truetype"), url("../../fonts/open-sans-v15-latin-700italic.svg#OpenSans") format("svg");
+  /* Legacy iOS */ }
+
+/* open-sans-800 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: url("../../fonts/open-sans-v15-latin-800.eot");
+  /* IE9 Compat Modes */
+  src: local("Open Sans ExtraBold"), local("OpenSans-ExtraBold"), url("../../fonts/open-sans-v15-latin-800.eot?#iefix") format("embedded-opentype"), url("../../fonts/open-sans-v15-latin-800.woff2") format("woff2"), url("../../fonts/open-sans-v15-latin-800.woff") format("woff"), url("../../fonts/open-sans-v15-latin-800.ttf") format("truetype"), url("../../fonts/open-sans-v15-latin-800.svg#OpenSans") format("svg");
+  /* Legacy iOS */ }
+
+/* open-sans-800italic - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 800;
+  src: url("../../fonts/open-sans-v15-latin-800italic.eot");
+  /* IE9 Compat Modes */
+  src: local("Open Sans ExtraBold Italic"), local("OpenSans-ExtraBoldItalic"), url("../../fonts/open-sans-v15-latin-800italic.eot?#iefix") format("embedded-opentype"), url("../../fonts/open-sans-v15-latin-800italic.woff2") format("woff2"), url("../../fonts/open-sans-v15-latin-800italic.woff") format("woff"), url("../../fonts/open-sans-v15-latin-800italic.ttf") format("truetype"), url("../../fonts/open-sans-v15-latin-800italic.svg#OpenSans") format("svg");
+  /* Legacy iOS */ }
+
+/* yellowtail-regular - latin */
+@font-face {
+  font-family: 'Yellowtail';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/yellowtail-v8-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Yellowtail Regular"), local("Yellowtail-Regular"), url("../../fonts/yellowtail-v8-latin-regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/yellowtail-v8-latin-regular.woff2") format("woff2"), url("../../fonts/yellowtail-v8-latin-regular.woff") format("woff"), url("../../fonts/yellowtail-v8-latin-regular.ttf") format("truetype"), url("../../fonts/yellowtail-v8-latin-regular.svg#Yellowtail") format("svg");
+  /* Legacy iOS */ }
+
+.cat__box {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  color: #fff;
+  display: inline-block;
+  font-size: 1em;
+  margin: 0 4px;
+  padding: 7px 10px;
+  text-decoration: none; }
+
+.cat__quote {
+  color: #595959;
+  font: 100% Yellowtail;
+  font-size: 1.7em; }
+
+.section__title {
+  border-bottom: 1px solid #3b3b3b;
+  color: #3b3b3b;
   display: block;
-  background: brown; }
+  font-size: 2.06em;
+  font-weight: bold;
+  line-height: 1.2;
+  max-width: 475px;
+  text-transform: uppercase;
+  width: 100%; }
+
+.job__title {
+  color: #3b3b3b;
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.job__title__info {
+  text-transform: none; }
+
+.degree,
+.job__subtitle {
+  color: #3e6ac1;
+  display: block;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1.18; }
+
+.italic {
+  font-style: italic; }
+
+strong {
+  font-weight: bold; }
+
+.hex {
+  width: 79px;
+  height: 45px;
+  background-color: #ccc;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: auto 173px;
+  position: relative;
+  float: left;
+  margin: 15px 4px;
+  text-align: center;
+  zoom: 1;
+  cursor: default;
+  pointer-events: none; }
+
+.hex.hex-gap {
+  margin-left: 47px; }
+
+.hex a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-indent: -9999em;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.hex .corner-1,
+.hex .corner-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  z-index: -2;
+  overflow: hidden;
+  backface-visibility: hidden; }
+
+.hex .corner-1 {
+  z-index: -1;
+  transform: rotate(60deg); }
+
+.hex .corner-2 {
+  transform: rotate(-60deg); }
+
+.hex .corner-1:before,
+.hex .corner-2:before {
+  width: 80px;
+  height: 80px;
+  content: '';
+  position: absolute;
+  background: inherit;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: inherit;
+  background-repeat: no-repeat;
+  backface-visibility: hidden; }
+
+.hex .corner-1:before {
+  transform: rotate(-60deg) translate(-87px, 0px);
+  transform-origin: 0 0; }
+
+.hex .corner-2:before {
+  transform: rotate(60deg) translate(-48px, -11px);
+  bottom: 0; }
+
+/* Custom styles*/
+.hex .inner {
+  color: #eee;
+  padding-top: 10px; }
+  .hex .inner.two-line {
+    line-height: 1.3;
+    padding-top: 0; }
+
+.hex h4 {
+  margin: 0; }
+
+.hex hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  width: 60%;
+  margin: 15px auto; }
+
+.hex p {
+  font-size: 16px;
+  width: 80%;
+  margin: 0 auto; }
+
+.hex.hex-1 {
+  background: #3e6ac1; }
+
+.hex.hex-2 {
+  background: #2a2d76; }
+
+.hex.hex-3 {
+  background: #5bcf4f; }
+
+.hex.hex-4 {
+  background: #d591c4; }
+
+.hex.hex-5 {
+  background: #c23c3c; }
+
+.hex.hex-empty {
+  cursor: pointer;
+  pointer-events: all;
+  opacity: .4; }
+
+.hex.hex-hidden {
+  background: none; }
+
+.question__mark {
+  font-weight: bold;
+  font-size: 30px;
+  color: #878787;
+  line-height: 0.8; }
+
+body {
+  background: url(../../img/background.png) repeat #fff fixed;
+  color: #878787;
+  font: 100% Open Sans;
+  position: relative; }
+
+.page-wrapper {
+  margin: 0 auto;
+  max-width: 1280px; }
+
+.link__circle .fab,
+.link__circle .fas {
+  color: #fff; }
+
+.link__circle .fa-circle {
+  color: #3e6ac1; }
+
+.google__blue {
+  color: #4285f4; }
+
+.google__red {
+  color: #ea4335; }
+
+.google__yellow {
+  color: #fbbc05; }
+
+.google__green {
+  color: #34a853; }
+
+.header-wrapper {
+  padding: 0 15px; }
+
+.bandeau {
+  background: #3e6ac1;
+  display: block;
+  height: 13px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%; }
+
+.container__icon {
+  float: right;
+  margin: 22px 0 0 0; }
+
+.link__circle {
+  margin: 0 5px; }
+
+.container__info {
+  display: inline-block;
+  margin-top: 52px; }
+
+.name {
+  color: #3b3b3b;
+  font-size: 2.9em;
+  font-weight: bold;
+  line-height: 1.2; }
+
+.emploi {
+  color: #3b3b3b;
+  font-size: 1.3em;
+  font-weight: bold; }
+
+.nav-wrapper {
+  margin: 70px 0 0;
+  text-align: center; }
+
+.cat__one {
+  background: #3e6ac1; }
+
+.cat__two {
+  background: #2a2d76; }
+
+.cat__three {
+  background: #5bcf4f; }
+
+.cat__four {
+  background: #d591c4; }
+
+.cat__five {
+  background: #c23c3c; }
+
+.cat__quote {
+  display: inline-block;
+  line-height: 1.2;
+  margin-left: 10px;
+  vertical-align: bottom; }
+
+.content-wrapper {
+  margin-top: 120px; }
+
+.section {
+  box-sizing: border-box;
+  padding: 0 15px; }
+
+.container__right {
+  float: right;
+  padding-left: 30px;
+  width: 40%; }
+
+.container__left {
+  float: left;
+  padding-right: 30px;
+  width: 60%; }
+
+.description {
+  display: block;
+  margin-top: 6px; }
+
+.list {
+  margin: 25px 0; }
+
+.list__left,
+.list__right {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 0 25px;
+  vertical-align: top; }
+
+.list__left {
+  padding-left: 0;
+  text-align: right;
+  width: 29%; }
+
+.list__right {
+  width: 65%; }
+
+.container__skills {
+  margin-top: 35px;
+  min-height: 340px; }
