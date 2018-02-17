@@ -34,3 +34,28 @@
 	margin-left: 10px;
 	vertical-align: bottom;
 }
+
+@media only screen and (max-width: 767px) {
+	.container__nav {
+		display: flex;
+		flex-flow: row wrap;
+	}
+
+	.cat__one,
+	.cat__two {
+		box-sizing: border-box;
+		flex: 1 44%;
+		margin-bottom: 8px;
+	}
+
+	.cat__three,
+	.cat__four,
+	.cat__five {
+		flex: 1;
+	}
+
+	.cat__quote {
+		margin-top: 10px;
+		width: 100%;
+	}
+}

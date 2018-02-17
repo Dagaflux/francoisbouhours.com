@@ -36,3 +36,15 @@ body {
 .google__green {
 	color: $google-green;
 }
+
+@media only screen and (min-width: 1280px) {
+	.hide-desktop {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 1279px) {
+	.hide-mobile {
+		display: none;
+	}
+}
